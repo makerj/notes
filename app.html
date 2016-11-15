@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyAEnoO9GMUJydBgkWWRYQ7gIScd041jRPE",
+            authDomain: "notes-d4ccc.firebaseapp.com",
+            databaseURL: "https://notes-d4ccc.firebaseio.com",
+            storageBucket: "notes-d4ccc.appspot.com",
+            messagingSenderId: "449575424131"
+        });
+    </script>
+</head>
+<body>
+<div class="root">
+    <div class="channels">
+        <h1 class="channels-title container">Channels</h1>
+        <ul class="container">
+            <li><a href="javascript:;"># COM 보드</a></li>
+            <li><a href="javascript:;"># NetPDL-Editor</a></li>
+            <li><a href="javascript:;"># 61850 Connector</a></li>
+            <li><a href="javascript:;"># 네오와인</a></li>
+        </ul>
+    </div>
+    <div class="notes">
+        <div class="actionbar container">
+            <h1 class="actionbar-title">COM 보드</h1>
+            <button class="btn-big" style="float: right" id="btn-account">@junhui</button>
+        </div>
+        <div class="note base" id="note-prototype">
+            <h1 class="note-title container">title</h1>
+            <p class="note-message container">message</p>
+        </div>
+        <div class="note">
+            <h1 class="note-title container">11-14 새 요구사항</h1>
+            <ul class="note-message container">
+                <li>VME 동시 변경 필요</li>
+            </ul>
+        </div>
+        <div class="note">
+            <h1 class="note-title container">11-15 새 요구사항</h1>
+            <ul class="note-message container">
+                <li>SEQNO 시작 1번으로 통합</li>
+                <li>빅엔디안으로 통합</li>
+            </ul>
+        </div>
+        <div class="inputs">
+            <div style="width: 100%; height: 100%; display: inline-block; vertical-align: top;">
+                <input type="text" placeholder="제목" style="width: 100%; height: 30px; font-size: 20px"><br>
+                <textarea style="width: 100%; font-size: 20px; height: calc(100% - 35px)"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
